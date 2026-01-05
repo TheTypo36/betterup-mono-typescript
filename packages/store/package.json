@@ -6,12 +6,13 @@
     "@types/bun": "latest"
   },
   "exports": {
-    "./client": "./src/index.ts"
+    "./client": "./index.ts"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
+    "@prisma/client": "^7.2.0",
     "@types/dotenv": "^8.2.3",
     "dotenv": "^17.2.3",
     "prisma": "^7.2.0"
