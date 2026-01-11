@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import prisma from "store/client";
+import prisma from "@repo/db";
 const getAllWebsites = async (req: Request, res: Response) => {
   try {
     const website = await prisma.website.findMany();

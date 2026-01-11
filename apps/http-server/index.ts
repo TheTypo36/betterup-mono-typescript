@@ -1,7 +1,11 @@
 import express, { type Request, type Response } from "express";
 import { userRoutes, websiteRoutes } from "./routes/v1";
+import { configDotenv } from "dotenv";
 
+configDotenv();
 const app = express();
+app.use(express.urlencoded());
+app.use(express.json());
 
 app.get("/health", (req: Request, res: Response) => {
   res.send("<h1>server is running fine!!");
